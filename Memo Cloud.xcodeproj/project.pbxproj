@@ -6,6 +6,16 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		391873DD2D48EA1500889E1E /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 391873DC2D48EA1500889E1E /* CombineMoya */; };
+		391873DF2D48EA1500889E1E /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 391873DE2D48EA1500889E1E /* Moya */; };
+		391873E12D48EA1500889E1E /* ReactiveMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 391873E02D48EA1500889E1E /* ReactiveMoya */; };
+		391873E32D48EA1500889E1E /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 391873E22D48EA1500889E1E /* RxMoya */; };
+		391875CC2D48EEAD00889E1E /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 391875CB2D48EEAD00889E1E /* KeychainAccess */; };
+		391875D42D48EFFC00889E1E /* Reachability in Frameworks */ = {isa = PBXBuildFile; productRef = 391875D32D48EFFC00889E1E /* Reachability */; };
+		391875D72D48F04C00889E1E /* Loaf in Frameworks */ = {isa = PBXBuildFile; productRef = 391875D62D48F04C00889E1E /* Loaf */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		391873C32D48E7A200889E1E /* Memo Cloud.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Memo Cloud.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -36,6 +46,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				391873DF2D48EA1500889E1E /* Moya in Frameworks */,
+				391875D42D48EFFC00889E1E /* Reachability in Frameworks */,
+				391873DD2D48EA1500889E1E /* CombineMoya in Frameworks */,
+				391873E32D48EA1500889E1E /* RxMoya in Frameworks */,
+				391873E12D48EA1500889E1E /* ReactiveMoya in Frameworks */,
+				391875CC2D48EEAD00889E1E /* KeychainAccess in Frameworks */,
+				391875D72D48F04C00889E1E /* Loaf in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +95,13 @@
 			);
 			name = "Memo Cloud";
 			packageProductDependencies = (
+				391873DC2D48EA1500889E1E /* CombineMoya */,
+				391873DE2D48EA1500889E1E /* Moya */,
+				391873E02D48EA1500889E1E /* ReactiveMoya */,
+				391873E22D48EA1500889E1E /* RxMoya */,
+				391875CB2D48EEAD00889E1E /* KeychainAccess */,
+				391875D32D48EFFC00889E1E /* Reachability */,
+				391875D62D48F04C00889E1E /* Loaf */,
 			);
 			productName = "Memo Cloud";
 			productReference = 391873C32D48E7A200889E1E /* Memo Cloud.app */;
@@ -107,6 +131,12 @@
 			);
 			mainGroup = 391873BA2D48E7A200889E1E;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				391873DB2D48EA1500889E1E /* XCRemoteSwiftPackageReference "Moya" */,
+				391875CA2D48EEAD00889E1E /* XCRemoteSwiftPackageReference "KeychainAccess" */,
+				391875D22D48EFFC00889E1E /* XCRemoteSwiftPackageReference "Reachability" */,
+				391875D52D48F04C00889E1E /* XCRemoteSwiftPackageReference "Loaf" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 391873C42D48E7A200889E1E /* Products */;
 			projectDirPath = "";
@@ -153,6 +183,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -160,9 +191,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.app.Memo-Cloud";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -181,6 +216,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -188,9 +224,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.app.Memo-Cloud";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -335,6 +375,79 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		391873DB2D48EA1500889E1E /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.3;
+			};
+		};
+		391875CA2D48EEAD00889E1E /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		391875D22D48EFFC00889E1E /* XCRemoteSwiftPackageReference "Reachability" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ashleymills/Reachability.swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		391875D52D48F04C00889E1E /* XCRemoteSwiftPackageReference "Loaf" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/schmidyy/Loaf";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.7.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		391873DC2D48EA1500889E1E /* CombineMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 391873DB2D48EA1500889E1E /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = CombineMoya;
+		};
+		391873DE2D48EA1500889E1E /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 391873DB2D48EA1500889E1E /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+		391873E02D48EA1500889E1E /* ReactiveMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 391873DB2D48EA1500889E1E /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = ReactiveMoya;
+		};
+		391873E22D48EA1500889E1E /* RxMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 391873DB2D48EA1500889E1E /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = RxMoya;
+		};
+		391875CB2D48EEAD00889E1E /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 391875CA2D48EEAD00889E1E /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
+		};
+		391875D32D48EFFC00889E1E /* Reachability */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 391875D22D48EFFC00889E1E /* XCRemoteSwiftPackageReference "Reachability" */;
+			productName = Reachability;
+		};
+		391875D62D48F04C00889E1E /* Loaf */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 391875D52D48F04C00889E1E /* XCRemoteSwiftPackageReference "Loaf" */;
+			productName = Loaf;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 391873BB2D48E7A200889E1E /* Project object */;
 }

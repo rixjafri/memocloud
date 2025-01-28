@@ -10,6 +10,9 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
+    static var sharedInstance: SceneDelegate {
+        return  UIApplication.shared.connectedScenes.first!.delegate as! SceneDelegate
+    }
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
@@ -45,6 +48,40 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Called as the scene transitions from the foreground to the background.
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
+    }
+    
+    func pushToLoginRoot(isAnimate: Bool = true) {
+        guard let navigationController = window?.rootViewController as? UINavigationController else {
+            print("Root view controller is not a navigation controller")
+            return
+        }
+        
+        // Check if the current top view controller is already LoginVC
+        if navigationController.topViewController is LoginVC {
+            print("Already on the login screen")
+            return
+        }
+        
+            // Load and push the LoginVC if it's not already on top
+            let vc = UIStoryboard.storyBoard(withName: .auth).loadViewController(withIdentifier: .loginVC) as! LoginVC
+            navigationController.pushViewController(vc, animated: isAnimate)
+        
+        
+    }
+    
+    func pushToDashboradRoot(){
+        
+        Defaults[.VisibleViewController] = storyboards.dashboard.rawValue
+        
+        
+        let vc = UIStoryboard.storyBoard(withName: .main).loadViewController(withIdentifier: .dashboardVC) as! DashboardVC
+
+        // Ensure the rootViewController is a UINavigationController
+        if let navigationController = window?.rootViewController as? UINavigationController {
+            navigationController.pushViewController(vc, animated: true)
+        } else {
+            print("Root view controller is not a navigation controller")
+        }
     }
 
 

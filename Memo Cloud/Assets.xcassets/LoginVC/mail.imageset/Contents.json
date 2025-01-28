@@ -1,6 +1,7 @@
 {
-  "colors" : [
+  "images" : [
     {
+      "filename" : "mail.svg",
       "idiom" : "universal"
     }
   ],
