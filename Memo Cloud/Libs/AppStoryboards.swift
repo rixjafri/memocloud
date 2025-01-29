@@ -47,28 +47,10 @@ enum viewControllers: String {
     
     //Main Storyboard
     case loginVC                    = "LoginVC"
-    case forgotVC                   = "ForgotVC"
-    case verificationVC             = "VerificationVC"
-    case passwordVC                 = "PasswordVC"
-    case passwordChangeVC                 = "PasswordChangeVC"
+    case signup                     = "SignupVC"
+    case passwordChangeVC           = "PasswordChangeVC"
     case dashboardVC                = "DashboardVC"
-    case notificationVC             = "NotificationVC"
-    case notificationPermissionVC   = "NotificationPermissionVC"
     case settingsVC                 = "SettingsVC"
-    case appearanceVC               = "AppearanceVC"
-    case vehiclesVC                 = "VehiclesVC"
-    case favoritesVC                = "FavoritesVC"
-    case saleReportVC               = "SaleReportVC"
-    case purchaseReportVC           = "PurchaseReportVC"
-    case mukechiVC                  = "MukechiVC"
-    case salesVC                    = "SalesVC"
-    case filterVC                   = "FilterVC"
-    case listVC                     = "ListVC"
-    case dateVC                     = "DateVC"
-    case previewVC                  = "PreviewVC"
-    case galleryVC                  = "GalleryVC"
-    case bankTransferReportVC       = "BankTransferReportVC"
-    case bankReportVC               = "BankReportVC"
     
     
 }

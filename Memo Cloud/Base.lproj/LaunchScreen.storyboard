@@ -23,12 +23,12 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Memo Cloud" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lDf-2X-x0i">
                                 <rect key="frame" x="90.000000000000014" y="501" width="213.33333333333337" height="42"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="35"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" name="text_000000"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5NK-zH-LSp"/>
-                        <color key="backgroundColor" name="background_f7f8ff"/>
+                        <color key="backgroundColor" name="background_fcfcfc_1D1E1C"/>
                         <constraints>
                             <constraint firstItem="lDf-2X-x0i" firstAttribute="centerX" secondItem="vKv-qU-YAy" secondAttribute="centerX" id="7e7-Yh-KOd"/>
                             <constraint firstItem="wZ8-55-vGA" firstAttribute="width" secondItem="vKv-qU-YAy" secondAttribute="width" multiplier="0.712468" id="8Tg-CC-wBa"/>
@@ -46,8 +46,11 @@
     </scenes>
     <resources>
         <image name="logo-icon" width="533" height="314"/>
-        <namedColor name="background_f7f8ff">
-            <color red="0.96862745098039216" green="0.97254901960784312" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="background_fcfcfc_1D1E1C">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="text_000000">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

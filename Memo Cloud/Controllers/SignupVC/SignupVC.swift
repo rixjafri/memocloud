@@ -7,23 +7,37 @@
 
 import UIKit
 
-class SignupVC: UIViewController {
+class SignupVC: BaseVC {
 
+    
+    @IBOutlet var fullName: UITextField!
+    @IBOutlet var email: UITextField!
+    @IBOutlet var password: UITextField!
+    @IBOutlet var confirmPassword: UITextField!
+    @IBOutlet var signupBtn: UIButton!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.buttonPressAnimation(sender: self.signupBtn)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func dissmissVC(_ sender: UIButton) {
+        
+        
     }
-    */
+    
+    
+    @IBAction func signupAction(_ sender: UIButton) {
+    }
+    
+    
+    @IBAction func termsAndConditions(_ sender: UIButton) {
+    }
+    
 
 }

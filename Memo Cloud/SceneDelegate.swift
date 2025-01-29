@@ -71,7 +71,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     func pushToDashboradRoot(){
         
-        Defaults[.VisibleViewController] = storyboards.dashboard.rawValue
+        
         
         
         let vc = UIStoryboard.storyBoard(withName: .main).loadViewController(withIdentifier: .dashboardVC) as! DashboardVC

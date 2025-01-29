@@ -48,12 +48,12 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Memo Cloud" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XyQ-Br-7qe">
                                 <rect key="frame" x="90.000000000000014" y="501" width="213.33333333333337" height="42"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="35"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" name="text_000000"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8a5-7t-7lW"/>
-                        <color key="backgroundColor" name="background_f7f8ff"/>
+                        <color key="backgroundColor" name="background_fcfcfc_1D1E1C"/>
                         <constraints>
                             <constraint firstItem="y01-Jd-EN8" firstAttribute="width" secondItem="jSQ-xN-jnW" secondAttribute="width" multiplier="0.712468" id="1n4-vn-CYY"/>
                             <constraint firstItem="y01-Jd-EN8" firstAttribute="height" secondItem="jSQ-xN-jnW" secondAttribute="height" multiplier="0.187793" id="7DI-mi-Wi0"/>
@@ -617,7 +617,7 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qwI-AC-c5k"/>
-                        <color key="backgroundColor" name="background_f7f8ff"/>
+                        <color key="backgroundColor" name="background_fcfcfc_1D1E1C"/>
                         <constraints>
                             <constraint firstItem="ScQ-mz-7vg" firstAttribute="top" secondItem="Dw3-iF-hwi" secondAttribute="bottom" id="EOf-0E-bCG"/>
                             <constraint firstItem="ScQ-mz-7vg" firstAttribute="leading" secondItem="qwI-AC-c5k" secondAttribute="leading" id="FDr-Mp-EuT"/>
@@ -655,6 +655,9 @@
         </namedColor>
         <namedColor name="background_f7f8ff">
             <color red="0.96862745098039216" green="0.97254901960784312" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="background_fcfcfc_1D1E1C">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="button_FFFFFF_252724">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

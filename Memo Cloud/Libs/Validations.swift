@@ -9,9 +9,9 @@ import Foundation
 
 
 // Function to validate username
-func validateUsername(_ username: String) -> Bool {
+func validateEmail(_ email: String) -> Bool {
     // Check if the username is not empty and meets the regex criteria
-    guard !username.isEmpty else {
+    guard !email.isEmpty else {
         return false
     }
     
