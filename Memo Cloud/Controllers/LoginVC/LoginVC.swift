@@ -1,6 +1,6 @@
 //
 //  LoginVC.swift
-//  JJSystems
+//  MemoCloud
 //
 //  Created by Rizwan Shah on 26/09/2024.
 //
@@ -23,8 +23,8 @@ class LoginVC: BaseVC, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
-        
+        self.email.text = "rix.jafri@gmail.com"
+        self.password.text = "12345"
         self.email.delegate = self
         self.password.delegate = self
         // Add target for touch down and touch up events
@@ -88,8 +88,6 @@ class LoginVC: BaseVC, UITextFieldDelegate {
             textField.resignFirstResponder()
         }
         
-        
-       
         return true
     }
 }
@@ -104,7 +102,7 @@ extension LoginVC {
                           LoginParms.password :  self.password.text!,] as [String : Any]
         
         
-        NetworkManager.shared.call(target: Apis.login(params: parameters)) { (result: Result<RequestResponse<UserData>, NetworkError>) in
+        NetworkManager.shared.call(target: Apis.login(params: parameters)) { (result: Result<RequestResponse<User>, NetworkError>) in
                     
             print("Result: \(result)")
             self.view.aj_hideDotLoadingIndicator()
@@ -113,11 +111,11 @@ extension LoginVC {
             case .success(let response):
                 if response.success {
                     // Check if user data exists in the response
-                    if let userData = response.data {
-                        print("User Data: \(userData)")
+                    if let user = response.data {
+                        print("User Data: \(user)")
                         
-                        AppUserDefaults.shared.saveUserData(userData: userData)
-                        AppUserDefaults.shared.setUserToken(userData.token)
+                        AppUserDefaults.shared.saveUserData(user: user)
+                        AppUserDefaults.shared.setUserToken(response.token ?? "")
                         AppUserDefaults.shared.setLoggedIn(true)
                         
                         let vc = UIStoryboard.storyBoard(withName: .main).loadViewController(withIdentifier: .dashboardVC) as! DashboardVC

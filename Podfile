@@ -7,4 +7,9 @@ target 'Memo Cloud' do
 
   # Pods for Memo Cloud
 
+pod 'PinterestLayout'
+pod 'Firebase/Storage'
+pod 'GTMSessionFetcher'
+pod 'DropDown'
+
 end

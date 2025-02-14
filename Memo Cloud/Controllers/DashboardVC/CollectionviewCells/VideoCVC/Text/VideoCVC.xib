@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="vV6-j6-aMG" customClass="VideoCVC" customModule="Memo_Cloud" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="326" height="92"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="326" height="92"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hbN-5p-fXX">
+                        <rect key="frame" x="0.0" y="0.0" width="326" height="92"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feed The Cat" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IDh-T7-ygA">
+                                <rect key="frame" x="10" y="9.9999999999999982" width="101.66666666666667" height="19.333333333333329"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
+                                <color key="textColor" name="text_000000"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BKc-En-yHf">
+                                <rect key="frame" x="10" y="34.333333333333343" width="306" height="32.666666666666657"/>
+                                <string key="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</string>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                <color key="textColor" name="text_000000"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3cf-0X-FUf">
+                                <rect key="frame" x="10" y="72" width="306" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="sTQ-9j-QDe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
+                                <color key="textColor" systemColor="systemGrayColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="text_FFFFFF"/>
+                        <constraints>
+                            <constraint firstItem="IDh-T7-ygA" firstAttribute="leading" secondItem="hbN-5p-fXX" secondAttribute="leading" constant="10" id="4fT-D4-ht5"/>
+                            <constraint firstItem="3cf-0X-FUf" firstAttribute="leading" secondItem="BKc-En-yHf" secondAttribute="leading" id="5xI-tW-5ag"/>
+                            <constraint firstItem="IDh-T7-ygA" firstAttribute="top" secondItem="hbN-5p-fXX" secondAttribute="top" constant="10" id="8yL-DF-Uhk"/>
+                            <constraint firstItem="BKc-En-yHf" firstAttribute="top" secondItem="IDh-T7-ygA" secondAttribute="bottom" constant="5" id="A3l-4G-waK"/>
+                            <constraint firstAttribute="trailing" secondItem="BKc-En-yHf" secondAttribute="trailing" constant="10" id="GYd-wF-1Z2"/>
+                            <constraint firstItem="3cf-0X-FUf" firstAttribute="top" secondItem="BKc-En-yHf" secondAttribute="bottom" constant="5" id="J4W-6v-PmA"/>
+                            <constraint firstAttribute="bottom" secondItem="3cf-0X-FUf" secondAttribute="bottom" id="Zpf-v9-7sL"/>
+                            <constraint firstItem="3cf-0X-FUf" firstAttribute="trailing" secondItem="BKc-En-yHf" secondAttribute="trailing" id="kYU-ut-NQq"/>
+                            <constraint firstItem="BKc-En-yHf" firstAttribute="leading" secondItem="IDh-T7-ygA" secondAttribute="leading" id="qYk-Se-FrI"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="12"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="j6t-Qj-UyE"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="hbN-5p-fXX" secondAttribute="bottom" id="J21-Xr-C1t"/>
+                <constraint firstItem="hbN-5p-fXX" firstAttribute="leading" secondItem="vV6-j6-aMG" secondAttribute="leading" id="Zta-gt-Eau"/>
+                <constraint firstAttribute="trailing" secondItem="hbN-5p-fXX" secondAttribute="trailing" id="gMn-ZV-VBQ"/>
+                <constraint firstItem="hbN-5p-fXX" firstAttribute="top" secondItem="vV6-j6-aMG" secondAttribute="top" id="xwg-dn-EXE"/>
+            </constraints>
+            <size key="customSize" width="326" height="92"/>
+            <connections>
+                <outlet property="categoryLbl" destination="3cf-0X-FUf" id="1q3-sw-yju"/>
+                <outlet property="desLbl" destination="BKc-En-yHf" id="zVq-jt-y3R"/>
+                <outlet property="mainView" destination="hbN-5p-fXX" id="ejv-ga-AdT"/>
+                <outlet property="titleLbl" destination="IDh-T7-ygA" id="8cU-yD-emj"/>
+            </connections>
+            <point key="canvasLocation" x="254.96183206106869" y="34.507042253521128"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="text_000000">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="text_FFFFFF">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,6 +1,6 @@
 //
 //  AppUserDefaults.swift
-//  JJSystems
+//  MemoCloud
 //
 //  Created by Rizwan Shah on 26/09/2024.
 //
@@ -22,7 +22,8 @@ class AppUserDefaults {
         case isLoggedIn
         case isRememberMe
         case userToken
-        case userData
+        case user
+        case category
         
     }
 
@@ -46,28 +47,28 @@ class AppUserDefaults {
     
     
     
-    func saveUserData(userData: UserData) {
+    func saveUserData(user: User) {
         let userDefaults = UserDefaults.standard
         
         do {
             let encoder = JSONEncoder()
-            let data = try encoder.encode(userData)
-            userDefaults.set(data, forKey: DefaultKeys.userData.rawValue)
+            let data = try encoder.encode(user)
+            userDefaults.set(data, forKey: DefaultKeys.user.rawValue)
         } catch {
             print("Error saving user data: \(error)")
         }
     }
     
-    func retrieveUserData() -> UserData? {
+    func retrieveUserData() -> User? {
         let userDefaults = UserDefaults.standard
         
-        guard let data = userDefaults.data(forKey: DefaultKeys.userData.rawValue) else {
+        guard let data = userDefaults.data(forKey: DefaultKeys.user.rawValue) else {
             return nil
         }
         
         do {
             let decoder = JSONDecoder()
-            let userData = try decoder.decode(UserData.self, from: data)
+            let userData = try decoder.decode(User.self, from: data)
             return userData
         } catch {
             print("Error retrieving user data: \(error)")
@@ -76,24 +77,42 @@ class AppUserDefaults {
     }
     
     func removeUserData() {
-        defaults.removeObject(forKey: DefaultKeys.userData.rawValue)
+        defaults.removeObject(forKey: DefaultKeys.user.rawValue)
     }
     
     
-    func updateDefaultCountryId(newCountryId: Int) {
-        // Retrieve existing UserData
-        guard var userData = AppUserDefaults.shared.retrieveUserData() else {
-            print("No user data found.")
-            return
+    func saveCategoriesData(categories: [Categories]) {
+        let userDefaults = UserDefaults.standard
+        
+        do {
+            let encoder = JSONEncoder()
+            let data = try encoder.encode(categories)
+            userDefaults.set(data, forKey: DefaultKeys.category.rawValue)
+        } catch {
+            print("Error saving countries data: \(error)")
+        }
+    }
+
+    func retrieveCategoriesData() -> [Categories]? {
+        let userDefaults = UserDefaults.standard
+        
+        guard let data = userDefaults.data(forKey: DefaultKeys.category.rawValue) else {
+            return nil
         }
         
-        // Update the defaultCountryId
-        userData.user.defaultCountryId = newCountryId
-        
-        // Save the updated UserData back to UserDefaults
-        AppUserDefaults.shared.saveUserData(userData: userData)
-        
-        print("Updated default country ID to \(newCountryId)")
+        do {
+            let decoder = JSONDecoder()
+            let categories = try decoder.decode([Categories].self, from: data)
+            return categories
+        } catch {
+            print("Error retrieving countries data: \(error)")
+            return nil
+        }
+    }
+
+    func removeCategoriesData() {
+        let userDefaults = UserDefaults.standard
+        userDefaults.removeObject(forKey: DefaultKeys.category.rawValue)
     }
     
     func setUserToken(_ userToken: String) {
@@ -118,7 +137,7 @@ class AppUserDefaults {
         
         defaults.removeObject(forKey: DefaultKeys.isLoggedIn.rawValue)
         defaults.removeObject(forKey: DefaultKeys.isRememberMe.rawValue)
-        defaults.removeObject(forKey: DefaultKeys.userData.rawValue)
+        defaults.removeObject(forKey: DefaultKeys.user.rawValue)
         defaults.removeObject(forKey: DefaultKeys.userToken.rawValue)
     }
     
@@ -126,7 +145,7 @@ class AppUserDefaults {
     func clearAllUserData() {
         
         defaults.removeObject(forKey: DefaultKeys.isLoggedIn.rawValue)
-        defaults.removeObject(forKey: DefaultKeys.userData.rawValue)
+        defaults.removeObject(forKey: DefaultKeys.user.rawValue)
         defaults.removeObject(forKey: DefaultKeys.userToken.rawValue)
     }
 }

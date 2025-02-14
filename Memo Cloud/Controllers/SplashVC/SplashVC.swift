@@ -1,6 +1,6 @@
 //
 //  SplashVC.swift
-//  JJSystems
+//  MemoCloud
 //
 //  Created by Rizwan Shah on 26/09/2024.
 //
@@ -8,6 +8,8 @@
 import UIKit
 import Reachability
 import Loaf
+
+
 
 class SplashVC: BaseVC {
 
@@ -36,7 +38,7 @@ class SplashVC: BaseVC {
         
         
         if AppUserDefaults.shared.isLoggedIn() {
-            SceneDelegate.sharedInstance.pushToDashboradRoot()
+            SceneDelegate.sharedInstance.pushToDashborad()
         }else{
             SceneDelegate.sharedInstance.pushToLoginRoot()
         }

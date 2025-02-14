@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3903284F2D5DFB160018A943 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 3903284E2D5DFB160018A943 /* Kingfisher */; };
+		390328522D5DFBEB0018A943 /* ImageViewer_swift in Frameworks */ = {isa = PBXBuildFile; productRef = 390328512D5DFBEB0018A943 /* ImageViewer_swift */; };
 		391873DD2D48EA1500889E1E /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 391873DC2D48EA1500889E1E /* CombineMoya */; };
 		391873DF2D48EA1500889E1E /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 391873DE2D48EA1500889E1E /* Moya */; };
 		391873E12D48EA1500889E1E /* ReactiveMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 391873E02D48EA1500889E1E /* ReactiveMoya */; };
@@ -14,10 +16,15 @@
 		391875CC2D48EEAD00889E1E /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 391875CB2D48EEAD00889E1E /* KeychainAccess */; };
 		391875D42D48EFFC00889E1E /* Reachability in Frameworks */ = {isa = PBXBuildFile; productRef = 391875D32D48EFFC00889E1E /* Reachability */; };
 		391875D72D48F04C00889E1E /* Loaf in Frameworks */ = {isa = PBXBuildFile; productRef = 391875D62D48F04C00889E1E /* Loaf */; };
+		3942F1062D4CD79100C0CA21 /* SwiftQRCodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 3942F1052D4CD79100C0CA21 /* SwiftQRCodeScanner */; };
+		C207BD486DCDE939AFF21218 /* Pods_Memo_Cloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A441E2251E5F3E98F6946845 /* Pods_Memo_Cloud.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		133E545C4A103AB1050A826A /* Pods-Memo Cloud.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Memo Cloud.debug.xcconfig"; path = "Target Support Files/Pods-Memo Cloud/Pods-Memo Cloud.debug.xcconfig"; sourceTree = "<group>"; };
 		391873C32D48E7A200889E1E /* Memo Cloud.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Memo Cloud.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A441E2251E5F3E98F6946845 /* Pods_Memo_Cloud.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Memo_Cloud.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7E2ADD1790BB76BDD5FF1E2 /* Pods-Memo Cloud.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Memo Cloud.release.xcconfig"; path = "Target Support Files/Pods-Memo Cloud/Pods-Memo Cloud.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -47,12 +54,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				391873DF2D48EA1500889E1E /* Moya in Frameworks */,
+				3942F1062D4CD79100C0CA21 /* SwiftQRCodeScanner in Frameworks */,
 				391875D42D48EFFC00889E1E /* Reachability in Frameworks */,
+				390328522D5DFBEB0018A943 /* ImageViewer_swift in Frameworks */,
 				391873DD2D48EA1500889E1E /* CombineMoya in Frameworks */,
+				3903284F2D5DFB160018A943 /* Kingfisher in Frameworks */,
 				391873E32D48EA1500889E1E /* RxMoya in Frameworks */,
 				391873E12D48EA1500889E1E /* ReactiveMoya in Frameworks */,
 				391875CC2D48EEAD00889E1E /* KeychainAccess in Frameworks */,
 				391875D72D48F04C00889E1E /* Loaf in Frameworks */,
+				C207BD486DCDE939AFF21218 /* Pods_Memo_Cloud.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +75,8 @@
 			children = (
 				391873C52D48E7A200889E1E /* Memo Cloud */,
 				391873C42D48E7A200889E1E /* Products */,
+				DD89D5E2566200FDB0295650 /* Pods */,
+				CDB24620D03B6ECAD829999A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -75,6 +88,23 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		CDB24620D03B6ECAD829999A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A441E2251E5F3E98F6946845 /* Pods_Memo_Cloud.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DD89D5E2566200FDB0295650 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				133E545C4A103AB1050A826A /* Pods-Memo Cloud.debug.xcconfig */,
+				E7E2ADD1790BB76BDD5FF1E2 /* Pods-Memo Cloud.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -82,9 +112,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 391873D62D48E7A300889E1E /* Build configuration list for PBXNativeTarget "Memo Cloud" */;
 			buildPhases = (
+				A9083685EE6FC49E3D91C980 /* [CP] Check Pods Manifest.lock */,
 				391873BF2D48E7A200889E1E /* Sources */,
 				391873C02D48E7A200889E1E /* Frameworks */,
 				391873C12D48E7A200889E1E /* Resources */,
+				1A765765FE22F92BE745DDFC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -102,6 +134,9 @@
 				391875CB2D48EEAD00889E1E /* KeychainAccess */,
 				391875D32D48EFFC00889E1E /* Reachability */,
 				391875D62D48F04C00889E1E /* Loaf */,
+				3942F1052D4CD79100C0CA21 /* SwiftQRCodeScanner */,
+				3903284E2D5DFB160018A943 /* Kingfisher */,
+				390328512D5DFBEB0018A943 /* ImageViewer_swift */,
 			);
 			productName = "Memo Cloud";
 			productReference = 391873C32D48E7A200889E1E /* Memo Cloud.app */;
@@ -136,6 +171,9 @@
 				391875CA2D48EEAD00889E1E /* XCRemoteSwiftPackageReference "KeychainAccess" */,
 				391875D22D48EFFC00889E1E /* XCRemoteSwiftPackageReference "Reachability" */,
 				391875D52D48F04C00889E1E /* XCRemoteSwiftPackageReference "Loaf" */,
+				3942F1042D4CD79100C0CA21 /* XCRemoteSwiftPackageReference "SwiftQRCodeScanner" */,
+				3903284D2D5DFB160018A943 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				390328502D5DFBEB0018A943 /* XCRemoteSwiftPackageReference "ImageViewer" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 391873C42D48E7A200889E1E /* Products */;
@@ -157,6 +195,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1A765765FE22F92BE745DDFC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Memo Cloud/Pods-Memo Cloud-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Memo Cloud/Pods-Memo Cloud-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Memo Cloud/Pods-Memo Cloud-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A9083685EE6FC49E3D91C980 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Memo Cloud-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		391873BF2D48E7A200889E1E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -170,14 +250,19 @@
 /* Begin XCBuildConfiguration section */
 		391873D72D48E7A300889E1E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 133E545C4A103AB1050A826A /* Pods-Memo Cloud.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 79AMYAS9V3;
+				DEVELOPMENT_TEAM = LQVKHD4PD8;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Memo Cloud/Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need access to your camera to scan QR codes.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "We need access to your microphone for video recording.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "This app requires access to your photo library to save scanned QR codes.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -190,7 +275,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.app.Memo-Cloud";
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.memocloud;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -204,14 +289,19 @@
 		};
 		391873D82D48E7A300889E1E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7E2ADD1790BB76BDD5FF1E2 /* Pods-Memo Cloud.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 79AMYAS9V3;
+				DEVELOPMENT_TEAM = LQVKHD4PD8;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Memo Cloud/Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need access to your camera to scan QR codes.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "We need access to your microphone for video recording.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "This app requires access to your photo library to save scanned QR codes.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -224,7 +314,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.app.Memo-Cloud";
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.memocloud;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -379,6 +469,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		3903284D2D5DFB160018A943 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.2.0;
+			};
+		};
+		390328502D5DFBEB0018A943 /* XCRemoteSwiftPackageReference "ImageViewer" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/michaelhenry/ImageViewer.swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.3.8;
+			};
+		};
 		391873DB2D48EA1500889E1E /* XCRemoteSwiftPackageReference "Moya" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Moya/Moya.git";
@@ -411,9 +517,27 @@
 				minimumVersion = 0.7.0;
 			};
 		};
+		3942F1042D4CD79100C0CA21 /* XCRemoteSwiftPackageReference "SwiftQRCodeScanner" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/vinodiOS/SwiftQRCodeScanner.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.16.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		3903284E2D5DFB160018A943 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3903284D2D5DFB160018A943 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		390328512D5DFBEB0018A943 /* ImageViewer_swift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 390328502D5DFBEB0018A943 /* XCRemoteSwiftPackageReference "ImageViewer" */;
+			productName = ImageViewer_swift;
+		};
 		391873DC2D48EA1500889E1E /* CombineMoya */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 391873DB2D48EA1500889E1E /* XCRemoteSwiftPackageReference "Moya" */;
@@ -448,6 +572,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 391875D52D48F04C00889E1E /* XCRemoteSwiftPackageReference "Loaf" */;
 			productName = Loaf;
+		};
+		3942F1052D4CD79100C0CA21 /* SwiftQRCodeScanner */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3942F1042D4CD79100C0CA21 /* XCRemoteSwiftPackageReference "SwiftQRCodeScanner" */;
+			productName = SwiftQRCodeScanner;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

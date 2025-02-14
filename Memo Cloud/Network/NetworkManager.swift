@@ -44,9 +44,9 @@ enum NetworkError: Error {
 
 struct RequestResponse<T: Codable>: Codable {
     let success: Bool
-    let totalStock: Int?
     let data: T?
     let message: String
+    let token: String?
 }
 
 
@@ -84,31 +84,27 @@ class NetworkManager {
                 guard 200..<300 ~= statusCode else {
                     switch statusCode {
                     case 401:
-                        
-                        if AppUserDefaults.shared.isLoggedIn() {
-//                            AppUserDefaults.shared.clearAllUserData()
-//                            SceneDelegate.sharedInstance.pushToLoginRoot(isAnimate: false)
-                        }
-                        
                         do {
                             
                             let detectionResponse = try JSONDecoder().decode(RequestResponse<T>.self, from: response.data)
+                            
+                            
+                            
+                            
                             completion(.success(detectionResponse))
                         } catch {
                             print("Decoding error: \(error)") // Optional: Log the error for debugging
                             completion(.failure(.decodingError))
                         }
                         
-                        
-                        
                     case 403:
                         
-                        if AppUserDefaults.shared.isLoggedIn() {
-                            AppUserDefaults.shared.clearAllUserData()
-                            SceneDelegate.sharedInstance.pushToLoginRoot(isAnimate: false)
-                        }
+                        
                         completion(.failure(.forbidden))
                     default:
+                        
+                        
+                        
                         completion(.failure(.serverError(statusCode)))
                     }
                     return
@@ -117,8 +113,15 @@ class NetworkManager {
                 // If status code is valid, attempt to decode the response
                 do {
                     
-                    
                     let detectionResponse = try JSONDecoder().decode(RequestResponse<T>.self, from: response.data)
+                    
+                    if detectionResponse.message == "Token expired"{
+                        if AppUserDefaults.shared.isLoggedIn() {
+                            AppUserDefaults.shared.clearAllUserData()
+                            SceneDelegate.sharedInstance.pushToLoginRoot(isAnimate: false)
+                        }
+                    }
+                    
                     completion(.success(detectionResponse))
                 } catch {
                     print("Decoding error: \(error)") // Optional: Log the error for debugging

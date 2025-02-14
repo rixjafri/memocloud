@@ -1,6 +1,6 @@
 //
 //  BaseVC.swift
-//  JJSystems
+//  MemoCloud
 //
 //  Created by Rizwan Shah on 26/09/2024.
 //
@@ -10,11 +10,23 @@ import Loaf
 import AudioToolbox
 import AVFoundation
 
+
 struct MenuOpt: Codable {
     let id: String
     let name: String
     let image: String
     let description: String
+}
+
+enum ConfigType {
+    case categories
+}
+
+enum ListType {
+    case gallry
+    case list
+    case text
+    
 }
 
 class BaseVC: UIViewController {
@@ -31,6 +43,9 @@ class BaseVC: UIViewController {
     var observerBtn: UIButton!
     var audioPlayer: AVAudioPlayer?
     
+    var categories : [Categories] = AppUserDefaults.shared.retrieveCategoriesData() ?? []
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -44,6 +59,10 @@ class BaseVC: UIViewController {
         super.viewWillAppear(animated)
         
         
+    }
+    
+    func getAppVersion() -> String? {
+        return Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
     }
     
     
@@ -227,6 +246,8 @@ class BaseVC: UIViewController {
             return nil
         }
     }
+    
+    
     
     
     

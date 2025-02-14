@@ -121,7 +121,7 @@ extension UIViewController {
             NSAttributedString.Key.foregroundColor : setColor(color: .text_000000_FFFFFF)
         ])
         
-        let alertController = UIAlertController(title: "JJSystem", message: "", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "Memo Cloud", message: "", preferredStyle: .alert)
         alertController.setValue(attributedString, forKey: "attributedMessage")
         
         let backAction = UIAlertAction(title: btnTitle, style: .destructive, handler: backAction)

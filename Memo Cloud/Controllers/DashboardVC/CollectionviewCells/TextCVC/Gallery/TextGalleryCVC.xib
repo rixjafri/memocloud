@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="g6U-QA-fw0" customClass="TextGalleryCVC" customModule="Memo_Cloud" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="216" height="236"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="216" height="236"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1uH-8p-uqe">
+                        <rect key="frame" x="0.0" y="0.0" width="216" height="236"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feed The Cat" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="68x-4B-erv">
+                                <rect key="frame" x="10" y="9.9999999999999982" width="101.66666666666667" height="19.333333333333329"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="19.329999999999998" id="Usj-pX-UmU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
+                                <color key="textColor" name="text_000000"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4wc-2b-kXx">
+                                <rect key="frame" x="10" y="34.333333333333336" width="196" height="114.33333333333331"/>
+                                <string key="text">Cats are known for their playful nature and curiosity, often exploring every nook and cranny of their environment. They love chasing toys and can turn even the simplest objects into sources of entertainment.</string>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rII-Ia-h8N">
+                                <rect key="frame" x="10" y="216" width="196" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="Ddz-ST-KPn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
+                                <color key="textColor" systemColor="systemGrayColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="text_FFFFFF"/>
+                        <constraints>
+                            <constraint firstItem="rII-Ia-h8N" firstAttribute="leading" secondItem="4wc-2b-kXx" secondAttribute="leading" id="25u-OR-eN9"/>
+                            <constraint firstAttribute="trailing" secondItem="rII-Ia-h8N" secondAttribute="trailing" constant="10" id="3nW-bn-Yih"/>
+                            <constraint firstItem="4wc-2b-kXx" firstAttribute="leading" secondItem="1uH-8p-uqe" secondAttribute="leading" constant="10" id="Ak3-ce-JsS"/>
+                            <constraint firstAttribute="trailing" secondItem="4wc-2b-kXx" secondAttribute="trailing" constant="10" id="Bs2-sI-HwP"/>
+                            <constraint firstAttribute="bottom" secondItem="rII-Ia-h8N" secondAttribute="bottom" id="SLC-Sp-zue"/>
+                            <constraint firstItem="68x-4B-erv" firstAttribute="leading" secondItem="1uH-8p-uqe" secondAttribute="leading" constant="10" id="SvO-bt-Rpt"/>
+                            <constraint firstItem="4wc-2b-kXx" firstAttribute="top" secondItem="68x-4B-erv" secondAttribute="bottom" constant="5" id="cab-tv-iYr"/>
+                            <constraint firstItem="rII-Ia-h8N" firstAttribute="top" relation="greaterThanOrEqual" secondItem="4wc-2b-kXx" secondAttribute="bottom" constant="5" id="j5a-7P-3dJ"/>
+                            <constraint firstItem="68x-4B-erv" firstAttribute="top" secondItem="1uH-8p-uqe" secondAttribute="top" constant="10" id="rqg-ir-7hI"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="12"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="JJV-sg-EwC"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="1uH-8p-uqe" secondAttribute="bottom" id="5e4-0K-j0N"/>
+                <constraint firstAttribute="trailing" secondItem="1uH-8p-uqe" secondAttribute="trailing" id="JCI-Fs-PxJ"/>
+                <constraint firstItem="1uH-8p-uqe" firstAttribute="top" secondItem="g6U-QA-fw0" secondAttribute="top" id="d7j-ef-Axb"/>
+                <constraint firstItem="1uH-8p-uqe" firstAttribute="leading" secondItem="g6U-QA-fw0" secondAttribute="leading" id="oXd-gx-LZ2"/>
+            </constraints>
+            <size key="customSize" width="216" height="236"/>
+            <connections>
+                <outlet property="categoryLbl" destination="rII-Ia-h8N" id="3Fc-eY-3LO"/>
+                <outlet property="descriptionLbl" destination="4wc-2b-kXx" id="bPZ-TV-QSt"/>
+                <outlet property="mainView" destination="1uH-8p-uqe" id="7iL-Jp-WyV"/>
+                <outlet property="titleLbl" destination="68x-4B-erv" id="Zyu-1x-c62"/>
+            </connections>
+            <point key="canvasLocation" x="172.51908396946564" y="85.211267605633807"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="text_000000">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="text_FFFFFF">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

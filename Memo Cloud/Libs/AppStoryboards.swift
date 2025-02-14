@@ -51,6 +51,12 @@ enum viewControllers: String {
     case passwordChangeVC           = "PasswordChangeVC"
     case dashboardVC                = "DashboardVC"
     case settingsVC                 = "SettingsVC"
+    case previewVC                  = "PreviewVC"
+    case uploadVC                   = "UploadVC"
+    case listVC                     = "ListVC"
+    case codeScannerVC              = "CodeScannerVC"
+    case picturesDetailVC           = "PicturesDetailVC"
+    
     
     
 }

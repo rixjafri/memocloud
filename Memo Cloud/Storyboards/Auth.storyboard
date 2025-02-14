@@ -308,7 +308,6 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="ic_back"/>
                                 <connections>
-                                    <action selector="dismissVc:" destination="gP7-PQ-fp7" eventType="touchUpInside" id="QA9-Zh-NR4"/>
                                     <action selector="dissmissVC:" destination="d5y-7L-13a" eventType="touchUpInside" id="rGj-Pi-Uua"/>
                                 </connections>
                             </button>
@@ -458,7 +457,7 @@
                                                         <rect key="frame" x="5" y="0.0" width="264" height="50"/>
                                                         <color key="textColor" name="text_000000"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" returnKeyType="send" secureTextEntry="YES" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" returnKeyType="next" secureTextEntry="YES" smartInsertDeleteType="no" smartQuotesType="no"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
                                                                 <color key="value" name="CCC9C9"/>

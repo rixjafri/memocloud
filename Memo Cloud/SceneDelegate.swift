@@ -7,12 +7,52 @@
 
 import UIKit
 
-class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+class SceneDelegate: UIResponder, UIWindowSceneDelegate, QuickMenuDelegate {
 
     var window: UIWindow?
     static var sharedInstance: SceneDelegate {
         return  UIApplication.shared.connectedScenes.first!.delegate as! SceneDelegate
     }
+    
+    lazy var floatingButton : FloatingView = {
+        let normalButton = UIButton()
+        normalButton.backgroundColor = .clear
+        normalButton.frame = CGRect(x: 0, y: (UIScreen.main.bounds.height / 2) - 20.0, width: 48, height: 48)
+        normalButton.layer.cornerRadius = 24
+        normalButton.setImage(UIImage(named: "Floatingbutton"), for: .normal)
+        normalButton.addTarget(self, action: #selector(openMenu), for: .touchUpInside)
+        var floatingView = FloatingView(with: normalButton)
+        floatingView.delegate = self
+        return floatingView
+    }()
+    
+    @objc func openMenu() {
+        
+        
+        UIView.animate(withDuration: 0.3) {
+            self.floatingButton.floatingView.alpha = 1.0
+        }
+        guard let viewController = UIViewController.topMostViewController() else { return }
+        
+        DispatchQueue.main.async {
+            let tabbarHeight = viewController.tabBarController?.tabBar.bounds.height ?? 0
+            let frame = CGRect(x: viewController.view.bounds.origin.x, y: viewController.view.bounds.origin.y, width: viewController.view.bounds.width, height: viewController.view.bounds.height + tabbarHeight)
+            QuickMenu.sharedInstance.showPopup(vc: viewController, dalagate: self, parentview: viewController.view, frame: frame)
+            
+        }
+        
+        delay(durationInSeconds: 10.0) {
+            UIView.animate(withDuration: 0.3) {
+                self.floatingButton.floatingView.alpha = 0.4
+            }
+        }
+    }
+
+    func didHidePopup() {
+//        guard let viewController = UIViewController.topMostViewController() else { return }
+//        viewController.showTabbar()
+    }
+    
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
@@ -69,9 +109,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
     }
     
-    func pushToDashboradRoot(){
-        
-        
+    func pushToDashborad(){
         
         
         let vc = UIStoryboard.storyBoard(withName: .main).loadViewController(withIdentifier: .dashboardVC) as! DashboardVC
@@ -83,7 +121,57 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             print("Root view controller is not a navigation controller")
         }
     }
+    
+    
+    
+    func pushToUpload(type: Int){
+        // 0: text, 1: picture, 2: video
+        
+        let vc = UIStoryboard.storyBoard(withName: .main).loadViewController(withIdentifier: .uploadVC) as! UploadVC
+        vc.type = type
+        // Ensure the rootViewController is a UINavigationController
+        if let navigationController = window?.rootViewController as? UINavigationController {
+            navigationController.pushViewController(vc, animated: true)
+        } else {
+            print("Root view controller is not a navigation controller")
+        }
+    }
+    
+    func pushToPasswordUpdate(){
+        
+        let vc = UIStoryboard.storyBoard(withName: .auth).loadViewController(withIdentifier: .passwordChangeVC) as! PasswordChangeVC
+        
+        // Ensure the rootViewController is a UINavigationController
+        if let navigationController = window?.rootViewController as? UINavigationController {
+            
+            navigationController.pushViewController(vc, animated: true)
+        } else {
+            print("Root view controller is not a navigation controller")
+        }
+    }
 
 
+}
+
+extension SceneDelegate:FloatingViewDelegate {
+    
+    func viewDraggingDidBegin(view: UIView, in window: UIWindow?) {
+        UIView.animate(withDuration: 0.3) {
+            view.alpha = 1.0
+        }
+    }
+    
+    func viewDraggingDidEnd(view: UIView, in window: UIWindow?) {
+        (view as? UIButton)?.cancelTracking(with: nil)
+        UIView.animate(withDuration: 0.4) {
+            view.alpha = 1.0
+        }
+        
+        delay(durationInSeconds: 10.0) {
+            UIView.animate(withDuration: 0.3) {
+                view.alpha = 0.4
+            }
+        }
+    }
 }
 
