@@ -1587,10 +1587,10 @@ Please try something else.</string>
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gnP-C8-nDC">
-                                        <rect key="frame" x="163.33333333333334" y="18" width="66.666666666666657" height="24"/>
+                                        <rect key="frame" x="72" y="18" width="249" height="24"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gallery" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2fv-x1-g23">
-                                                <rect key="frame" x="0.0" y="0.0" width="66.666666666666671" height="24"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="249" height="24"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                                 <color key="textColor" name="text_000000"/>
                                                 <nil key="highlightedColor"/>
@@ -1634,30 +1634,54 @@ Please try something else.</string>
                                 <constraints>
                                     <constraint firstItem="A8n-8s-nco" firstAttribute="centerY" secondItem="gnP-C8-nDC" secondAttribute="centerY" id="71p-bJ-GQa"/>
                                     <constraint firstItem="gnP-C8-nDC" firstAttribute="centerY" secondItem="vlQ-LP-0kf" secondAttribute="centerY" id="EGV-hV-86x"/>
+                                    <constraint firstItem="A8n-8s-nco" firstAttribute="leading" secondItem="gnP-C8-nDC" secondAttribute="trailing" constant="16" id="Fgn-To-UpF"/>
                                     <constraint firstAttribute="trailing" secondItem="A8n-8s-nco" secondAttribute="trailing" constant="16" id="RqJ-5d-SOp"/>
                                     <constraint firstItem="fwW-m5-SEn" firstAttribute="centerY" secondItem="vlQ-LP-0kf" secondAttribute="centerY" id="WYQ-1K-Fff"/>
+                                    <constraint firstItem="gnP-C8-nDC" firstAttribute="leading" secondItem="fwW-m5-SEn" secondAttribute="trailing" constant="16" id="iLb-W5-7lW"/>
                                     <constraint firstItem="gnP-C8-nDC" firstAttribute="centerX" secondItem="vlQ-LP-0kf" secondAttribute="centerX" id="irp-Ow-jXd"/>
                                     <constraint firstAttribute="height" constant="60" id="pix-B1-F2h"/>
                                     <constraint firstItem="fwW-m5-SEn" firstAttribute="leading" secondItem="vlQ-LP-0kf" secondAttribute="leading" constant="16" id="qSY-1B-jE7"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feed The Cat" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DoB-BC-rRD">
+                                <rect key="frame" x="16" y="135" width="361" height="19.333333333333343"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
+                                <color key="textColor" name="text_000000"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xS9-hV-XdB">
+                                <rect key="frame" x="16" y="170.33333333333331" width="361" height="631.66666666666674"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="WTM-Xd-NKv"/>
                         <color key="backgroundColor" name="background_fcfcfc_1D1E1C"/>
                         <constraints>
                             <constraint firstItem="z6T-Mc-6al" firstAttribute="trailing" secondItem="WTM-Xd-NKv" secondAttribute="trailing" id="0Dy-0C-MYK"/>
                             <constraint firstItem="vlQ-LP-0kf" firstAttribute="leading" secondItem="WTM-Xd-NKv" secondAttribute="leading" id="2EW-vH-V7e"/>
+                            <constraint firstItem="xS9-hV-XdB" firstAttribute="leading" secondItem="DoB-BC-rRD" secondAttribute="leading" id="2hQ-in-gPL"/>
                             <constraint firstItem="z6T-Mc-6al" firstAttribute="leading" secondItem="WTM-Xd-NKv" secondAttribute="leading" id="3aW-Ay-44r"/>
+                            <constraint firstItem="xS9-hV-XdB" firstAttribute="top" secondItem="DoB-BC-rRD" secondAttribute="bottom" constant="16" id="HE2-Ll-9Qp"/>
+                            <constraint firstItem="DoB-BC-rRD" firstAttribute="top" secondItem="z6T-Mc-6al" secondAttribute="bottom" constant="16" id="Hkp-Tu-vBZ"/>
+                            <constraint firstItem="xS9-hV-XdB" firstAttribute="trailing" secondItem="DoB-BC-rRD" secondAttribute="trailing" id="IRV-3w-oaM"/>
                             <constraint firstItem="z6T-Mc-6al" firstAttribute="top" secondItem="S79-EN-koo" secondAttribute="top" id="OSC-CU-7kI"/>
                             <constraint firstItem="vlQ-LP-0kf" firstAttribute="trailing" secondItem="WTM-Xd-NKv" secondAttribute="trailing" id="V9P-CV-Eic"/>
+                            <constraint firstItem="WTM-Xd-NKv" firstAttribute="trailing" secondItem="DoB-BC-rRD" secondAttribute="trailing" constant="16" id="WH2-hT-cYF"/>
+                            <constraint firstItem="DoB-BC-rRD" firstAttribute="leading" secondItem="WTM-Xd-NKv" secondAttribute="leading" constant="16" id="hZW-ku-ZWl"/>
                             <constraint firstItem="z6T-Mc-6al" firstAttribute="bottom" secondItem="vlQ-LP-0kf" secondAttribute="bottom" id="jha-me-ajB"/>
+                            <constraint firstItem="WTM-Xd-NKv" firstAttribute="bottom" secondItem="xS9-hV-XdB" secondAttribute="bottom" constant="16" id="lGy-kD-vpv"/>
                             <constraint firstItem="vlQ-LP-0kf" firstAttribute="top" secondItem="WTM-Xd-NKv" secondAttribute="top" id="tOG-Dh-PkE"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="backBtn" destination="fwW-m5-SEn" id="BTu-qR-dan"/>
+                        <outlet property="descriptionLbl" destination="xS9-hV-XdB" id="PDC-hL-Hbc"/>
                         <outlet property="menuView" destination="awr-xL-rW0" id="iZp-qg-HnW"/>
                         <outlet property="screenTitle" destination="2fv-x1-g23" id="dvF-kw-gZo"/>
+                        <outlet property="titleLbl" destination="DoB-BC-rRD" id="Kbu-su-IWU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F9V-b2-geI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -28,7 +28,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="326" height="92"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feed The Cat" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GeJ-JH-kZl">
-                                <rect key="frame" x="10" y="9.9999999999999982" width="101.66666666666667" height="19.333333333333329"/>
+                                <rect key="frame" x="10" y="9.9999999999999982" width="306" height="19.333333333333329"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
                                 <color key="textColor" name="text_000000"/>
                                 <nil key="highlightedColor"/>
@@ -56,6 +56,7 @@
                             <constraint firstItem="266-6C-SwZ" firstAttribute="leading" secondItem="GeJ-JH-kZl" secondAttribute="leading" id="BvI-6z-LYx"/>
                             <constraint firstAttribute="bottom" secondItem="uSy-Ct-d3d" secondAttribute="bottom" id="YYg-DL-qAx"/>
                             <constraint firstItem="uSy-Ct-d3d" firstAttribute="leading" secondItem="266-6C-SwZ" secondAttribute="leading" id="dXC-xD-Qvg"/>
+                            <constraint firstAttribute="trailing" secondItem="GeJ-JH-kZl" secondAttribute="trailing" constant="10" id="hpu-1Y-1VG"/>
                             <constraint firstItem="GeJ-JH-kZl" firstAttribute="top" secondItem="LRe-rw-DqR" secondAttribute="top" constant="10" id="iFc-oy-TMp"/>
                             <constraint firstItem="uSy-Ct-d3d" firstAttribute="trailing" secondItem="266-6C-SwZ" secondAttribute="trailing" id="kv5-GL-Y4E"/>
                             <constraint firstItem="GeJ-JH-kZl" firstAttribute="leading" secondItem="LRe-rw-DqR" secondAttribute="leading" constant="10" id="oe0-td-9De"/>

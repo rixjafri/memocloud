@@ -28,7 +28,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="326" height="92"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feed The Cat" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IDh-T7-ygA">
-                                <rect key="frame" x="10" y="9.9999999999999982" width="101.66666666666667" height="19.333333333333329"/>
+                                <rect key="frame" x="10" y="9.9999999999999982" width="306" height="19.333333333333329"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
                                 <color key="textColor" name="text_000000"/>
                                 <nil key="highlightedColor"/>
@@ -57,6 +57,7 @@
                             <constraint firstItem="IDh-T7-ygA" firstAttribute="top" secondItem="hbN-5p-fXX" secondAttribute="top" constant="10" id="8yL-DF-Uhk"/>
                             <constraint firstItem="BKc-En-yHf" firstAttribute="top" secondItem="IDh-T7-ygA" secondAttribute="bottom" constant="5" id="A3l-4G-waK"/>
                             <constraint firstAttribute="trailing" secondItem="BKc-En-yHf" secondAttribute="trailing" constant="10" id="GYd-wF-1Z2"/>
+                            <constraint firstAttribute="trailing" secondItem="IDh-T7-ygA" secondAttribute="trailing" constant="10" id="Is4-zK-fJ1"/>
                             <constraint firstItem="3cf-0X-FUf" firstAttribute="top" secondItem="BKc-En-yHf" secondAttribute="bottom" constant="5" id="J4W-6v-PmA"/>
                             <constraint firstAttribute="bottom" secondItem="3cf-0X-FUf" secondAttribute="bottom" id="Zpf-v9-7sL"/>
                             <constraint firstItem="3cf-0X-FUf" firstAttribute="trailing" secondItem="BKc-En-yHf" secondAttribute="trailing" id="kYU-ut-NQq"/>

@@ -38,7 +38,7 @@
                                 <rect key="frame" x="40" y="40" width="20" height="20"/>
                             </activityIndicatorView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feed The Cat" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GeJ-JH-kZl">
-                                <rect key="frame" x="110" y="9.9999999999999982" width="101.66666666666669" height="19.333333333333329"/>
+                                <rect key="frame" x="110" y="9.9999999999999982" width="206" height="19.333333333333329"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
                                 <color key="textColor" name="text_000000"/>
                                 <nil key="highlightedColor"/>
@@ -70,6 +70,7 @@
                             <constraint firstItem="266-6C-SwZ" firstAttribute="leading" secondItem="GeJ-JH-kZl" secondAttribute="leading" id="BvI-6z-LYx"/>
                             <constraint firstAttribute="bottom" secondItem="uSy-Ct-d3d" secondAttribute="bottom" id="CDu-5e-kde"/>
                             <constraint firstAttribute="trailing" secondItem="266-6C-SwZ" secondAttribute="trailing" constant="10" id="JQX-HF-MJQ"/>
+                            <constraint firstAttribute="trailing" secondItem="GeJ-JH-kZl" secondAttribute="trailing" constant="10" id="Pxx-6t-YYe"/>
                             <constraint firstItem="e8x-gQ-hkE" firstAttribute="leading" secondItem="LRe-rw-DqR" secondAttribute="leading" id="QQB-5p-1ih"/>
                             <constraint firstItem="GeJ-JH-kZl" firstAttribute="top" secondItem="LRe-rw-DqR" secondAttribute="top" constant="10" id="iFc-oy-TMp"/>
                             <constraint firstItem="ncI-Th-Ey4" firstAttribute="centerX" secondItem="e8x-gQ-hkE" secondAttribute="centerX" id="iQ5-Lb-mQh"/>

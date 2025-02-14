@@ -34,16 +34,20 @@ class PicturesDetailVC: BaseVC {
     var imageUrls : [URL] = []
     var downloadedImageUrls : [URL] = []
     var subTitle : String?
-    var userId : Int?
+//    var userId : Int?
     var mediaInfo : [MediaInfo] = []
+    var content : Contents?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+        self.mediaInfo = content?.mediaInfo ?? []
+        
         // Do any additional setup after loading the view.
         self.menuView.isHidden = true
         if let userData = AppUserDefaults.shared.retrieveUserData(){
-            self.menuView.isHidden = userData.id == self.userId ? false:true
+            self.menuView.isHidden = userData.id == content?.userId ? false:true
         }
         
         if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {

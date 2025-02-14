@@ -28,7 +28,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="216" height="236"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feed The Cat" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n5r-oX-31x">
-                                <rect key="frame" x="10" y="10" width="101.66666666666667" height="20"/>
+                                <rect key="frame" x="10" y="10" width="196" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="9Td-wR-OF2"/>
                                 </constraints>
@@ -65,6 +65,7 @@
                             <constraint firstAttribute="trailing" secondItem="e8x-gQ-hkE" secondAttribute="trailing" id="gnl-rM-xfz"/>
                             <constraint firstItem="e8x-gQ-hkE" firstAttribute="leading" secondItem="LRe-rw-DqR" secondAttribute="leading" id="hbv-M9-3kx"/>
                             <constraint firstAttribute="trailing" secondItem="VMD-Db-KKf" secondAttribute="trailing" constant="10" id="l2x-Xi-Isr"/>
+                            <constraint firstAttribute="trailing" secondItem="n5r-oX-31x" secondAttribute="trailing" constant="10" id="mCo-oa-lr1"/>
                             <constraint firstItem="VMD-Db-KKf" firstAttribute="top" secondItem="e8x-gQ-hkE" secondAttribute="bottom" id="nHu-1D-Qv9"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>

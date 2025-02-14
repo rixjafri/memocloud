@@ -15,13 +15,14 @@ class NotesDetailVC: BaseVC {
     @IBOutlet var backBtn: UIButton!
     @IBOutlet var screenTitle: UILabel!
     @IBOutlet var menuView: UIView!
+    @IBOutlet var titleLbl: UILabel!
+    @IBOutlet var descriptionLbl: UITextView!
+    
     
     
     let menuArr = ["Edit","Delete"]
-    
     var subTitle : String?
-    var userId : Int?
-    var mediaInfo : [MediaInfo] = []
+    var content : Contents?
     
     
     override func viewDidLoad() {
@@ -30,13 +31,14 @@ class NotesDetailVC: BaseVC {
         // Do any additional setup after loading the view.
         self.menuView.isHidden = true
         if let userData = AppUserDefaults.shared.retrieveUserData(){
-            self.menuView.isHidden = userData.id == self.userId ? false:true
+            self.menuView.isHidden = userData.id == content?.userId ? false:true
         }
         
        
         self.screenTitle.text = self.subTitle?.capitalized
         
-        
+        self.titleLbl.text = self.content?.title
+        self.descriptionLbl.text = self.content?.description
         
     }
     

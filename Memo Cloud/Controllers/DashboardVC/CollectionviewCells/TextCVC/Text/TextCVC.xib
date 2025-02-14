@@ -28,7 +28,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="216" height="236"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feed The Cat" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="68x-4B-erv">
-                                <rect key="frame" x="10" y="9.9999999999999982" width="101.66666666666667" height="19.333333333333329"/>
+                                <rect key="frame" x="10" y="9.9999999999999982" width="196" height="19.333333333333329"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
                                 <color key="textColor" name="text_000000"/>
                                 <nil key="highlightedColor"/>
@@ -56,6 +56,7 @@
                             <constraint firstItem="4wc-2b-kXx" firstAttribute="leading" secondItem="1uH-8p-uqe" secondAttribute="leading" constant="10" id="Ak3-ce-JsS"/>
                             <constraint firstAttribute="trailing" secondItem="4wc-2b-kXx" secondAttribute="trailing" constant="10" id="Bs2-sI-HwP"/>
                             <constraint firstItem="rII-Ia-h8N" firstAttribute="leading" secondItem="4wc-2b-kXx" secondAttribute="leading" id="CyR-Ls-Nvc"/>
+                            <constraint firstAttribute="trailing" secondItem="68x-4B-erv" secondAttribute="trailing" constant="10" id="FlN-fO-BmD"/>
                             <constraint firstItem="rII-Ia-h8N" firstAttribute="trailing" secondItem="4wc-2b-kXx" secondAttribute="trailing" id="Jz2-e3-DyW"/>
                             <constraint firstItem="68x-4B-erv" firstAttribute="leading" secondItem="1uH-8p-uqe" secondAttribute="leading" constant="10" id="SvO-bt-Rpt"/>
                             <constraint firstAttribute="bottom" secondItem="rII-Ia-h8N" secondAttribute="bottom" id="Vka-NK-lha"/>

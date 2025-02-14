@@ -46,7 +46,7 @@
                                 <rect key="frame" x="40" y="36" width="20" height="20"/>
                             </activityIndicatorView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feed The Cat" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cpJ-wO-1zp">
-                                <rect key="frame" x="110" y="9.9999999999999982" width="101.66666666666669" height="19.333333333333329"/>
+                                <rect key="frame" x="110" y="9.9999999999999982" width="206" height="19.333333333333329"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
                                 <color key="textColor" name="text_000000"/>
                                 <nil key="highlightedColor"/>
@@ -75,6 +75,7 @@
                             <constraint firstItem="bDQ-iA-F5R" firstAttribute="centerX" secondItem="cCR-e7-Skb" secondAttribute="centerX" id="956-Wg-KHp"/>
                             <constraint firstItem="zQi-XN-rdN" firstAttribute="leading" secondItem="cpJ-wO-1zp" secondAttribute="leading" id="BnS-Xt-pnf"/>
                             <constraint firstItem="bDQ-iA-F5R" firstAttribute="centerY" secondItem="cCR-e7-Skb" secondAttribute="centerY" id="BqX-F6-Ofh"/>
+                            <constraint firstAttribute="trailing" secondItem="cpJ-wO-1zp" secondAttribute="trailing" constant="10" id="C6O-pB-1S7"/>
                             <constraint firstAttribute="bottom" secondItem="cCR-e7-Skb" secondAttribute="bottom" id="GG9-bP-ANQ"/>
                             <constraint firstItem="cCR-e7-Skb" firstAttribute="top" secondItem="mew-RT-oz3" secondAttribute="top" id="IuN-xo-PBq"/>
                             <constraint firstItem="cCR-e7-Skb" firstAttribute="leading" secondItem="mew-RT-oz3" secondAttribute="leading" id="PT1-I7-z9x"/>

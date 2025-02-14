@@ -277,6 +277,7 @@ extension DashboardVC: UICollectionViewDelegate, UICollectionViewDataSource {
                 }
                 
                 cell.titleLbl.text = content.title.capitalized
+                cell.categoryLbl.text = content.categoriesNames
                 let media = content.mediaInfo ?? []
                 if media.count > 0 {
                     cell.configure(image: media.first!)
@@ -320,6 +321,7 @@ extension DashboardVC: UICollectionViewDelegate, UICollectionViewDataSource {
                 }
                 // Configure the cell if needed
                 cell.titleLbl.text = content.title.capitalized
+                cell.categoryLbl.text = content.categoriesNames
                 cell.desLbl.text = content.description
                 let media = content.mediaInfo ?? []
                 if media.count > 0 {
@@ -333,6 +335,7 @@ extension DashboardVC: UICollectionViewDelegate, UICollectionViewDataSource {
                 }
                 // Configure the cell if needed
                 cell.titleLbl.text = content.title.capitalized
+                cell.categoryLbl.text = content.categoriesNames
                 cell.desLbl.text = content.description
                 let media = content.mediaInfo ?? []
                 if media.count > 0 {
@@ -376,6 +379,7 @@ extension DashboardVC: UICollectionViewDelegate, UICollectionViewDataSource {
                 }
                 // Configure the cell if needed
                 cell.titleLbl.text = content.title.capitalized
+                cell.categoryLbl.text = content.categoriesNames
                 cell.desLbl.text = content.description
                 cell.categoryLbl.text = content.categoriesNames
                 return cell
@@ -399,12 +403,15 @@ extension DashboardVC: UICollectionViewDelegate, UICollectionViewDataSource {
             
             switch content.type {
             case 0:
-                print("No")
+                let vc = UIStoryboard.storyBoard(withName: .main).loadViewController(withIdentifier: .notesDetailVC) as! NotesDetailVC
+                vc.subTitle = content.title
+                vc.content = content
+                self.navigationController?.pushViewController(vc, animated: true)
+                
             case 1:
                 let vc = UIStoryboard.storyBoard(withName: .main).loadViewController(withIdentifier: .picturesDetailVC) as! PicturesDetailVC
                 vc.subTitle = content.title
-                vc.userId = content.userId
-                vc.mediaInfo = content.mediaInfo ?? []
+                vc.content = content
                 self.navigationController?.pushViewController(vc, animated: true)
             default:
                 if let vc = UIStoryboard.storyBoard(withName: .main).loadViewController(withIdentifier: .previewVC) as? PreviewVC {

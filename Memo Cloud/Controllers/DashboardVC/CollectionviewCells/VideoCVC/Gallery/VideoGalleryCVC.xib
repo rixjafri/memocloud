@@ -28,7 +28,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="216" height="236"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Feed The Cat" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c46-t8-QFt">
-                                <rect key="frame" x="10" y="10" width="101.66666666666667" height="20"/>
+                                <rect key="frame" x="10" y="10" width="196" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="RBo-h8-hc5"/>
                                 </constraints>
@@ -67,6 +67,7 @@
                             <constraint firstItem="jLL-Nq-N78" firstAttribute="leading" secondItem="c5d-zl-BTo" secondAttribute="leading" id="35i-5u-kcQ"/>
                             <constraint firstItem="5WM-y4-wo9" firstAttribute="leading" secondItem="jLL-Nq-N78" secondAttribute="leading" constant="10" id="AXV-WX-eEa"/>
                             <constraint firstItem="jLL-Nq-N78" firstAttribute="top" secondItem="c46-t8-QFt" secondAttribute="bottom" constant="10" id="FJV-8h-Wdz"/>
+                            <constraint firstAttribute="trailing" secondItem="c46-t8-QFt" secondAttribute="trailing" constant="10" id="PL8-4X-2J4"/>
                             <constraint firstItem="5WM-y4-wo9" firstAttribute="top" secondItem="jLL-Nq-N78" secondAttribute="bottom" id="XB8-vO-Nii"/>
                             <constraint firstItem="FVB-jw-liY" firstAttribute="centerY" secondItem="jLL-Nq-N78" secondAttribute="centerY" id="ZMf-Ro-78u"/>
                             <constraint firstItem="sJX-eu-27j" firstAttribute="centerY" secondItem="jLL-Nq-N78" secondAttribute="centerY" id="cSn-xs-KKQ"/>
